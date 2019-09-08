@@ -1,4 +1,4 @@
-# Lista requisita
+# Lista requisiti
 
 |**ID**|**Nome**			|**Priorità**|**Vers**|**Note** |
 |------|-------------|------------|--------|---------|
