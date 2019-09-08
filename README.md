@@ -8,7 +8,7 @@
 ## Progetti
 
 |Titolo             |Autori           |Responsabile            |Link    |
-|Fiocco di neve     |Marco Lorusso    |Luca Muggiasca, Petrini |        |
+|Fiocco di neve     |Marco Lorusso    |Luca Muggiasca, Petrini |a       |
 |:------------------|:----------------|:-----------------------|:-------|
 
 
