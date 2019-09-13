@@ -102,9 +102,14 @@
 
 ### Scopo
 
-  Lo scopo del progetto (scopi didattici/scopi operativi). Dovrebbe
-  descrivere il mandato, ma non vanno ricopiate le informazioni del
-  quaderno dei compiti (che va invece allegato).
+  Lo scopo di questo progetto è completamente didattico, mi aiuterà a entrare nel
+  mondo dei progetti singoli, e mi metterà alla prova con il linguaggio di programmazione
+  java. <br>
+  Il progetto consiste nel fare un'applicativo con java, che permette di creare
+  un fiocco di neve. Partendo da un triangolo pieno e con dei punti taglio fatti
+  col mouse, si tolgono alcune parti del triangolo e inseguito verrà generato
+  il fiocco di neve.
+
 
 
 ## Analisi
