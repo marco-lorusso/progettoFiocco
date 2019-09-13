@@ -51,15 +51,15 @@
 
 ### Informazioni sul progetto
 
-  In questo capitolo raccogliere le informazioni relative al progetto, ad esempio:
+  - Questo progetto sarà realizzato dall'allievo:
+        Marco Lorusso
+    Mentre i docenti che avranno il ruolo di clienti/capo azienda sono:
+        Luca Muggiasca
+        Geo Petrini
+  - Scuola d'arti e mestieri Trevano, Informatica, modulo 306
 
-  -   Allievo/i e docente/i coinvolti nel progetto e rispettivi ruoli,
+  -   Il progetto è stato iniziato il  03.09.2019 e finirà il 20.12.2019
 
-  -   scuola ,sezione, materia/e,
-
-  -   date di inizio e termine di consegna,
-
-  -   …
 
 ### Abstract
 
@@ -176,17 +176,24 @@
 
   |**ID**|**Nome**			|**Priorità**|**Vers**|**Note** |
   |------|-------------|------------|--------|---------|
-  |Req-01|L'applicativo deve essere scritto in java o JS.|1|1.0|...|
-  |Req-02|Se si usa java, bisogna creare un sito con descrizione e download dell'applicativo.|1|1.0|...|
-  |Req-03|Se si usa JS, bisogna creare un sito per l'hosting.|1|1.0|...|
-  |Req-04|I tagli nel triangolo devono essere fatti con i click del mouse.|1|1.0|...|
-  |Req-05|L'inserimento del percorso deve avere: l'aggiunta di punti e il reset totale.|1|1.0|...|
+  |Req-01|L'applicativo deve essere scritto in java.|1|1.0|...|
+  |Req-02|Bisogna creare un sito con descrizione software.|1|1.0|...|
+  |Req-03|Deve essere possibile scaricare il software|1|1.0|...|
+  |Req-04|I tagli nel triangolo devono poter essere fatti con il mouse.|1|1.0|...|
+  |Req-05|Deve essere possibile resettare i punti registrati.|1|1.0|...|
   |Req-06|Si possono rimuovere o spostare i punti.|2|1.0|...|
-  |Req-07|Ci deve essere un tasto genera, che crea il fiocco di neve.|1|1.0|...|
+  |Req-07|Ci deve essere un tasto genera, che crea il fiocco di neve e visualizza l'anteprima.|1|1.0|...|
   |Req-08|La generazione del fiocco di neve finale può avvenire in tempo reale.|2|1.0|...|
-  |Req-09|Si deve salvare il fiocco di neve come immagine raster e vettoriale(PNG,SVG).|1|1.0|...|
+  |Req-09|Si deve poter salvare il fiocco di neve.|1|1.0|...|
   |Req-10|Si devono poter salvare i punti di taglio del fiocco per permettere modifiche o rigenerazioni future.|1|1.0|...|
-
+  |Req-11|Il salvataggio del lavoro deve essere fatto in formato PNG o SVG.|1|1.0|...|
+  |Req-12|Il salvataggio deve avere dimensioni definite dall'utente.|1|1.0|...|
+  |Req-11|Deve esserci un'interfaccia grafica.|1|1.0|...|
+  |Req-12|L'area di lavoro deve essere un triangolo.|1|1.0|...|
+  |Req-13|La finestra deve essere ridimensionabile e sarà di minio 1024x768.|1|1.0|...|
+  |Req-14|Nel sito ci deve essere la lista dei requisiti, JRE, guida con screenshots.|1|1.0|...|
+  |Req-15|Il salvataggio in vettoriale, dev'essere della dimensione corrente, di 500 o di 1000.|1|1.0|...|
+  |Req-16|Per il salvataggio l'utente deve vedere una schermata per scegliere il formato.|1|1.0|...|
 
 
 
