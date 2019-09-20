@@ -51,10 +51,10 @@
 
 ### Informazioni sul progetto
 
-  - Questo progetto sarà realizzato dall'allievo:
+  - Questo progetto sarà realizzato dall'allievo: <br>
         Marco Lorusso
-    Mentre i docenti che avranno il ruolo di clienti/capo azienda sono:
-        Luca Muggiasca
+    <br>Mentre i docenti che avranno il ruolo di clienti/capo azienda sono: <br>
+        Luca Muggiasca,
         Geo Petrini
   - Scuola d'arti e mestieri Trevano, Informatica, modulo 306
 
@@ -63,42 +63,12 @@
 
 ### Abstract
 
-  E’ una breve e accurata rappresentazione dei contenuti di un documento,
-  senza notazioni critiche o valutazioni. Lo scopo di un abstract efficace
-  dovrebbe essere quello di far conoscere all’utente il contenuto di base
-  di un documento e metterlo nella condizione di decidere se risponde ai
-  suoi interessi e se è opportuno il ricorso al documento originale.
+  Il documento seguente conterrà tutto ciò che riguarda il progetto fiocco di neve,
+  dall'Analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
+  Il progetto è stato creato a scopi didattici, è stato eseguito in java, e tratta
+  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, una volta finito, si forma una forma di fiocco di neve, in seguito viene creata una finestra con il fiocco di neve completo, e con un tasto
+  di download per scaricare il fiocco.
 
-  Può contenere alcuni o tutti gli elementi seguenti:
-
-  -   **Background/Situazione iniziale**
-
-  -   **Descrizione del problema e motivazione**: Che problema ho cercato
-      di risolvere? Questa sezione dovrebbe includere l'importanza del
-      vostro lavoro, la difficoltà dell'area e l'effetto che potrebbe
-      avere se portato a termine con successo.
-
-  -   **Approccio/Metodi**: Come ho ottenuto dei progressi? Come ho
-      risolto il problema (tecniche…)? Quale è stata l’entità del mio
-      lavoro? Che fattori importanti controllo, ignoro o misuro?
-
-  -   **Risultati**: Quale è la risposta? Quali sono i risultati? Quanto è
-      più veloce, più sicuro, più economico o in qualche altro aspetto
-      migliore di altri prodotti/soluzioni?
-
-  Esempio di abstract:
-
-  > *As the size and complexity of today’s most modern computer chips
-  > increase, new techniques must be developed to effectively design and
-  > create Very Large Scale Integration chips quickly. For this project, a
-  > new type of hardware compiler is created. This hardware compiler will
-  > read a C++ program, and physically design a suitable microprocessor
-  > intended for running that specific program. With this new and powerful
-  > compiler, it is possible to design anything from a small adder, to a
-  > microprocessor with millions of transistors. Designing new computer
-  > chips, such as the Pentium 4, can require dozens of engineers and
-  > months of time. With the help of this compiler, a single person could
-  > design such a large-scale microprocessor in just weeks.*
 
 ### Scopo
 
@@ -116,68 +86,15 @@
 
 ### Analisi del dominio
 
-  Questo capitolo dovrebbe descrivere il contesto in cui il prodotto verrà
-  utilizzato, da questa analisi dovrebbero scaturire le risposte a quesiti
-  quali ad esempio:
+  Il contesto del prodotto, è completamente scolastico, il progetto è creato da
+  una specifica consegnata dai professori, con lo scopo di imparare a fare dei
+  progetti e a migliorare la conoscenza con il linguaggio di programmazione java.
 
-  -   Background/Situazione iniziale
+  Oltre a scopo didattico, non ci trovo un vero contesto dove usarlo. w
 
-  -   Quale è e come è organizzato il contesto in cui il prodotto dovrà
-      funzionare?
-
-  -   Come viene risolto attualmente il problema? Esiste già un prodotto
-      simile?
-
-  -   Chi sono gli utenti? Che bisogni hanno? Come e dove lavorano?
-
-  -   Che competenze/conoscenze/cultura posseggono gli utenti in relazione
-      con il problema?
-
-  -   Esistono convenzioni/standard applicati nel dominio?
-
-  -   Che conoscenze teoriche bisogna avere/acquisire per poter operare
-      efficacemente nel dominio?
-
-  -   …
+  Per adoperare con il codice del programma bisogna sapere almeno un minimo di java.
 
 ### Analisi e specifica dei requisiti
-
-  Il progettista, dopo aver ricevuto il mandato, in collaborazione con il
-  committente redige una lista di requisiti. Durante questi incontri,
-  tramite interviste (da inserire nei diari), il progettista deve cercare
-  di rispondere alle seguenti domande:
-
-  -   Quali sono i bisogni del committente?
-
-  -   Quali funzioni deve svolgere il prodotto?
-
-  -   Come devono essere implementate?
-
-  -   L’utente, come vorrebbe/dovrebbe interagire con il prodotto?
-
-  -   Come verrà utilizzato il prodotto?
-
-  -   Che tipo di interfaccia si immagina?
-
-  -   Che prestazioni minime deve fornire il prodotto?
-
-  -   Che grado di sicurezza deve avere il prodotto?
-
-  -   …
-
-  In base alla lista dei requisiti e all’analisi degli stessi, il
-  progettista redige una *specifica dei requisiti* in cui elenca e
-  descrive in modo dettagliato quali sono le funzionalità che il prodotto
-  fornirà. La specifica dovrebbe essere abbastanza dettagliata da poter
-  essere utilizzata come base per lo sviluppo, ma non troppo; ad esempio
-  non dovrebbe contenere dettagli di implementazione, o definizioni
-  dettagliate dell’interfaccia grafica a meno che questi non siano
-  considerati cruciali. Non si deve scordare che i requisiti non
-  rappresentano delle attività bensì delle caratteristiche che il prodotto
-  dovrà possedere.
-
-
-
 
   |**ID**|**Nome**			|**Priorità**|**Vers**|**Note** |
   |------|-------------|------------|--------|---------|
@@ -199,8 +116,6 @@
   |Req-14|Nel sito ci deve essere la lista dei requisiti, JRE, guida con screenshots.|1|1.0|...|
   |Req-15|Il salvataggio in vettoriale, dev'essere della dimensione corrente, di 500 o di 1000.|1|1.0|...|
   |Req-16|Per il salvataggio l'utente deve vedere una schermata per scegliere il formato.|1|1.0|...|
-
-
 
 
 **Spiegazione elementi tabella dei requisiti:**
@@ -229,36 +144,21 @@ requisiti.
 
 ### Use case
 
-I casi d’uso rappresentano l’interazione tra i vari attori e le
-funzionalità del prodotto.
+Questo programma è stato creato a scopo didattico, dunque non ha scopi di utilizzo,
+tranne se viene ottimizzato, potrebbe diventare un gioco dove, con la creazione
+del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettivi.
 
 ### Pianificazione
-
-Prima di stabilire una pianificazione bisogna avere almeno una vaga idea
-del modello di sviluppo che si intende adottare. In questa sezione
-bisognerà inserire il modello concettuale di sviluppo che si seguirà
-durante il progetto. Gli elementi di riferimento per una buona
-pianificazione derivano da una scomposizione top-down della problematica
-del progetto.
-
-La pianificazione può essere rappresentata mediante un diagramma di
-Gantt.
-
-Se si usano altri metodi di pianificazione (es scrum), dovranno apparire
-in questo capitolo.
-
+GANT
 ### Analisi dei mezzi
 
-Elencare e *descrivere* i mezzi disponibili per la realizzazione del
-progetto. Ricordarsi di sempre descrivere nel dettaglio le versioni e il
-modello di riferimento.
+Questo programma verrà creato con il linguaggio di programmazione java, la Versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
+Non richiede nessun hardware particolare per eseguire/creare questo programma.
+
 
 SDK, librerie, tools utilizzati per la realizzazione del progetto e
 eventuali dipendenze.
 
-Su quale piattaforma dovrà essere eseguito il prodotto? Che hardware
-particolare è coinvolto nel progetto? Che particolarità e limitazioni
-presenta? Che hw sarà disponibile durante lo sviluppo?
 
 ## Progettazione
 
