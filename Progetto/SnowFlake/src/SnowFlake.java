@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JFrame;
 
@@ -15,13 +16,16 @@ public class SnowFlake extends JFrame{
         super(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setSize(1024, 768);
+        Dimension dimensione = new Dimension(1024, 768);
+        this.setMinimumSize(dimensione);
     }
     
     public void paint(Graphics g){
         super.paint(g);
-        int larghezza = this.getWidth() / 3;
-        int altezza = this.getHeight() / 9;
-        int lato;
+        double larghezza = this.getWidth();
+        double altezza = this.getHeight() / Math.sqrt(3);
+        double lato;
+
 
         if (larghezza > altezza){
                  lato = altezza;
@@ -29,7 +33,23 @@ public class SnowFlake extends JFrame{
                 lato = larghezza;
         }
 
-        int xPartenza = (this.getWidth() - lato * 3) / 2;
-        int yPartenza = (this.getHeight() -lato * 9) / 2;
+        double xPartenza = (this.getWidth() - lato ) / 2;
+        double yPartenza = (this.getHeight()-lato * Math.sqrt(3)) / 2;
+        int[] xPoints = {
+            
+        };
+        g.setColor(Color.BLUE);
+        g.fillRect(0,0,getWidth(),getHeight());
+        g.setColor(Color.WHITE);
+        //prova
+        g.drawLine((int)xPartenza, (int)yPartenza, (int)xPartenza + (int)lato, (int)yPartenza + (int)lato);
+        //g.fillPolygon(xPoints, yPoints, WIDTH);
+        
+        
     }
+    
+    	public static void main(String[] args) {
+            SnowFlake sf = new SnowFlake("SnowFlake");
+            sf.setVisible(true);
+	}
 }
