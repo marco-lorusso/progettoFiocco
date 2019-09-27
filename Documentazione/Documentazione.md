@@ -90,7 +90,7 @@
   una specifica consegnata dai professori, con lo scopo di imparare a fare dei
   progetti e a migliorare la conoscenza con il linguaggio di programmazione java.
 
-  Oltre a scopo didattico, non ci trovo un vero contesto dove usarlo. w
+  Oltre a scopo didattico, non ci trovo un vero contesto dove usarlo.
 
   Per adoperare con il codice del programma bisogna sapere almeno un minimo di java.
 
@@ -162,26 +162,12 @@ eventuali dipendenze.
 
 ## Progettazione
 
-Questo capitolo descrive esaustivamente come deve essere realizzato il
-prodotto fin nei suoi dettagli. Una buona progettazione permette
-all’esecutore di evitare fraintendimenti e imprecisioni
-nell’implementazione del prodotto.
-
 ### Design dell’architettura del sistema
 
-Descrive:
-
--   La struttura del programma/sistema lo schema di rete...
-
--   Gli oggetti/moduli/componenti che lo compongono.
-
--   I flussi di informazione in ingresso ed in uscita e le
-    relative elaborazioni. Può utilizzare *diagrammi di flusso dei
-    dati* (DFD).
-
--   Eventuale sitemap
+![Diagramma di flusso](../../../Diagramma_flusso.jpg)
 
 ### Design dei dati e database
+
 
 Descrizione delle strutture di dati utilizzate dal programma in base
 agli attributi e le relazioni degli oggetti in uso.
@@ -193,10 +179,9 @@ versione, mentre le vecchie saranno sui diari.
 
 ### Design delle interfacce
 
-Descrizione delle interfacce interne ed esterne del sistema e
-dell’interfaccia utente. La progettazione delle interfacce è basata
-sulle informazioni ricavate durante la fase di analisi e realizzata
-tramite mockups.
+![Diagramma di flusso](../../../DesignTriangolo.png)
+<br><br><br>
+![Diagramma di flusso](../../../DesignFiocco.png)
 
 ### Design procedurale
 
