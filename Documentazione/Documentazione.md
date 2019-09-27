@@ -166,11 +166,6 @@ eventuali dipendenze.
 
 ![Diagramma di flusso](../../../Diagramma_flusso.jpg)
 
-### Design dei dati e database
-
-
-Descrizione delle strutture di dati utilizzate dal programma in base
-agli attributi e le relazioni degli oggetti in uso.
 
 ### Schema E-R, schema logico e descrizione.
 
@@ -193,10 +188,6 @@ ad esempio:
 -   Tabelle.
 
 -   Classi e metodi.
-
--   Tabelle di routing
-
--   Diritti di accesso a condivisioni …
 
 Questi documenti permetteranno di rappresentare i dettagli procedurali
 per la realizzazione del prodotto.
