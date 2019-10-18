@@ -16,7 +16,7 @@ import javax.swing.JFrame;
  */
 public class SnowFlake extends JFrame implements MouseListener {
 
-    private List<Polygon> pol = new ArrayList<>();
+    private List<Poligono> pol = new ArrayList<>();
 
     /**
      * Cateto del triangolo, rispetto all'orizzontale.
@@ -64,8 +64,9 @@ public class SnowFlake extends JFrame implements MouseListener {
         this.setSize(1024, 768);
         Dimension dimensione = new Dimension(1024, 768);
         this.setMinimumSize(dimensione);
-        this.pol.add(new Polygon(this));
+        this.pol.add(new Poligono(this));
         this.addMouseListener(this.pol.get(0));
+        this.addMouseListener(this);
     }
     
 
@@ -134,12 +135,17 @@ public class SnowFlake extends JFrame implements MouseListener {
 
     public static void main(String[] args) {
         SnowFlake sf = new SnowFlake("SnowFlake");
-        sf.setVisible(true);
-        
+        sf.setVisible(true);   
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+       if(pol.get(pol.size() - 1).isClosed()){
+           pol.add(new Poligono(this));
+           this.addMouseListener(this.pol.get(pol.size() - 1));
+       }else{
+           pol.get(pol.size() - 1).addPoint(e.getPoint());
+       }
     }
 
     @Override
