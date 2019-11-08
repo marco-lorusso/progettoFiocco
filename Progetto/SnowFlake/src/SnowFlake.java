@@ -1,22 +1,21 @@
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-/**
+/** 
  *
  * @author Marco Lorusso
  * @version 4.10.2019 Progetto Fiocco di neve, applicativo che dato un triangolo
  * "di carta", tramite dei tagli consecutivi possa generare un fiocco di neve.
  */
-public class SnowFlake extends JFrame implements MouseListener {
+public class SnowFlake extends JPanel implements MouseListener {
 
-    private List<Poligono> pol = new ArrayList<>();
+    public static List<Poligono> pol = new ArrayList<>();
 
     /**
      * Cateto del triangolo, rispetto all'orizzontale.
@@ -58,37 +57,33 @@ public class SnowFlake extends JFrame implements MouseListener {
      */
     private int Cy;
 
-    public SnowFlake(String title) {
-        super(title);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(1024, 768);
-        Dimension dimensione = new Dimension(1024, 768);
-        this.setMinimumSize(dimensione);
+    public SnowFlake() {
+        super();
         this.pol.add(new Poligono(this));
         this.addMouseListener(this.pol.get(0));
         this.addMouseListener(this);
     }
     
 
-    public void paint(Graphics g) {
-        super.paint(g);
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
         /**
          * Non c'è il responsive quindi le posizioni del triangolo sono fisse.
          */
-        altezza = 768 / 2;
+        altezza = getHeight() / 2;
         larghezza = (int) (altezza / Math.sqrt(3));
 
         /**
          * Ho tolto la larghezza alla grandezza della finestra e ho tolto i due
          * bordi dividendo.
          */
-        Ax = (1024 - larghezza) / 2;
+        Ax = (getWidth() - larghezza) / 2;
 
         /**
          * Ho fatto la stessa cosa per l'altezza.
          */
-        Ay = (768 - altezza) / 2;
+        Ay = (getHeight() - altezza) / 2;
 
         /**
          * Per il punto x del punto B ho aggiunto la larghezza al punto Ax.
@@ -133,10 +128,6 @@ public class SnowFlake extends JFrame implements MouseListener {
         }
     }
 
-    public static void main(String[] args) {
-        SnowFlake sf = new SnowFlake("SnowFlake");
-        sf.setVisible(true);   
-    }
 
     @Override
     public void mouseClicked(MouseEvent e) {

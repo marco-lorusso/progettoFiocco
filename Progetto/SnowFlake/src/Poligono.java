@@ -54,7 +54,7 @@ public class Poligono implements MouseListener
             }
             g.setColor(Color.RED);
             if(isClosed()){
-                g.setColor(Color.BLUE);
+                g.setColor(Color.blue);
                 g.fillPolygon(xPunti, yPunti, punti.size()); 
             }else{
                 for(int i = 0; i < punti.size(); i++){
