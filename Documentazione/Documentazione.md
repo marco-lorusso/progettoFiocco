@@ -66,8 +66,7 @@
   Il documento seguente conterrà tutto ciò che riguarda il progetto fiocco di neve,
   dall'Analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
   Il progetto è stato creato a scopi didattici, è stato eseguito in java, e tratta
-  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, una volta finito, si forma una forma di fiocco di neve, in seguito viene creata una finestra con il fiocco di neve completo, e con un tasto
-  di download per scaricare il fiocco.
+  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, li potrà salvare e caricare, spostare e eliminare, una volta finito, tramite il bottone 'genera' si creerà un fiocco di neve, e infine con il bottone 'salva' si potrà scaricare il .jar dell'applicativo.
 
 
 ### Scopo
@@ -149,7 +148,11 @@ tranne se viene ottimizzato, potrebbe diventare un gioco dove, con la creazione
 del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettivi.
 
 ### Pianificazione
-GANT
+![Gant preventivo](Gant_Consuntivo_SnowFlake.JPG)
+<br><br>
+![Gant preventivo](Gant_Consuntivo_SnowFlake_2.JPG)
+<br><br>
+![Gant preventivo](Gant_Consuntivo_SnowFlake_3.JPG)
 ### Analisi dei mezzi
 
 Questo programma verrà creato con il linguaggio di programmazione java, la Versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
@@ -166,11 +169,6 @@ eventuali dipendenze.
 
 ![Diagramma di flusso](../../../Diagramma_flusso.jpg)
 
-
-### Schema E-R, schema logico e descrizione.
-
-Se il diagramma E-R viene modificato, sulla doc dovrà apparire l’ultima
-versione, mentre le vecchie saranno sui diari.
 
 ### Design delle interfacce
 
