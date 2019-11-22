@@ -30,6 +30,8 @@ public class SnowFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         ResetPoint = new javax.swing.JButton();
         generateFlake = new javax.swing.JButton();
+        SavePoint = new javax.swing.JButton();
+        DownloadPoint = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         snowFlake = new SnowFlake();
 
@@ -49,6 +51,21 @@ public class SnowFrame extends javax.swing.JFrame {
 
         generateFlake.setText("Generate");
 
+        SavePoint.setText("Save Pont");
+        SavePoint.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        SavePoint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SavePointActionPerformed(evt);
+            }
+        });
+
+        DownloadPoint.setText("Download Point");
+        DownloadPoint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DownloadPointActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -56,13 +73,19 @@ public class SnowFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(ResetPoint, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(generateFlake, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(generateFlake, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SavePoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DownloadPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 67, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(245, 245, 245)
+                .addGap(183, 183, 183)
+                .addComponent(DownloadPoint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(SavePoint)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ResetPoint)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(generateFlake)
@@ -77,7 +100,7 @@ public class SnowFrame extends javax.swing.JFrame {
         snowFlake.setLayout(snowFlakeLayout);
         snowFlakeLayout.setHorizontalGroup(
             snowFlakeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 571, Short.MAX_VALUE)
+            .addGap(0, 543, Short.MAX_VALUE)
         );
         snowFlakeLayout.setVerticalGroup(
             snowFlakeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,6 +120,14 @@ public class SnowFrame extends javax.swing.JFrame {
         snowFlake.addMouseListener(snowFlake.pol.get(snowFlake.pol.size() - 1));
         snowFlake.repaint();
     }//GEN-LAST:event_ResetPointActionPerformed
+
+    private void SavePointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SavePointActionPerformed
+        snowFlake.savePoint();
+    }//GEN-LAST:event_SavePointActionPerformed
+
+    private void DownloadPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownloadPointActionPerformed
+        snowFlake.downloadPoint();
+    }//GEN-LAST:event_DownloadPointActionPerformed
 
     /**
      * @param args the command line arguments
@@ -134,7 +165,9 @@ public class SnowFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton DownloadPoint;
     private javax.swing.JButton ResetPoint;
+    private javax.swing.JButton SavePoint;
     private javax.swing.JButton generateFlake;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

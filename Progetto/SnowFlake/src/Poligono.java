@@ -54,7 +54,7 @@ public class Poligono implements MouseListener
             }
             g.setColor(Color.RED);
             if(isClosed()){
-                g.setColor(Color.blue);
+                g.setColor(Color.BLUE);
                 g.fillPolygon(xPunti, yPunti, punti.size()); 
             }else{
                 for(int i = 0; i < punti.size(); i++){
@@ -67,7 +67,7 @@ public class Poligono implements MouseListener
         }
     }
     public boolean isClosed(){
-            return chiuso;
+        return chiuso;
     }
     
     public void addPoint(Point point){
@@ -82,5 +82,38 @@ public class Poligono implements MouseListener
             }
         }  
         sf.repaint();
+    }
+    
+    public void removePoint(Point point){
+        if(!punti.isEmpty()){
+            for(int i = 0; i < punti.size(); i++){
+                if(punti.get(i).distance(point) < 8){
+                    punti.remove(punti.get(i));
+                }
+            }
+        }  
+        sf.repaint();
+    }
+    
+    public void movePoint(Point point){
+        int xp = point.x;
+        int yp = point.y;
+        if(!punti.isEmpty()){
+            for(int i = 0; i < punti.size(); i++){
+                if(punti.get(i).distance(point) < 10){
+                    punti.get(i).x = xp; 
+                    punti.get(i).y = yp;
+                }
+            }
+        }  
+        sf.repaint();
+    }
+    
+    public StringBuilder printPoint(){
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < this.punti.size(); i++){
+            sb = sb.append(this.punti.get(i).x).append(",").append(this.punti.get(i).y).append("\n");
+        }
+        return sb;
     }
 }
