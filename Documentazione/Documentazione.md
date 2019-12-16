@@ -63,10 +63,9 @@
 
 ### Abstract
 
-  Il documento seguente conterrà tutto ciò che riguarda il progetto fiocco di neve,
-  dall'Analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
-  Il progetto è stato creato a scopi didattici, è stato eseguito in java, e tratta
-  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, si potranno salvare e caricare, spostare e eliminare, una volta finito, tramite il bottone 'genera' si creerà un fiocco di neve, e infine con il bottone 'salva' si potrà scaricare il .jar dell'applicativo.
+  Il documento seguente conterrà tutto ciò che riguarda il progetto "Snow flake",
+  dall'analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
+  Il progetto è stato creato completamente a scopi didattici, si poteva fare sia in java che in javascript, e consiste nel fare un programma dove con un triangolo di base, l'utente inserisce dei punti nel frame, si potranno salvare e caricare da un file, spostare e eliminare, una volta finito, tramite il bottone 'genera' si genererà un fiocco di neve. Infine con un bottone apposito si potrà scaricare il .jar dell'applicativo. Tutto questo deve essere documentato in questa documentazione e nel sito web, dove ci sarà il download dell'applicativo.
 
 
 ### Scopo
@@ -115,29 +114,6 @@
   |Req-18|Per il salvataggio l'utente deve vedere una schermata per scegliere il formato.|1|1.0|...|
 
 
-**Spiegazione elementi tabella dei requisiti:**
-
-**ID**: identificativo univoco del requisito
-
-**Nome**: breve descrizione del requisito
-
-**Priorità**: indica l’importanza di un requisito nell’insieme del
-progetto, definita assieme al committente. Ad esempio poter disporre di
-report con colonne di colori diversi ha priorità minore rispetto al
-fatto di avere un database con gli elementi al suo interno. Solitamente
-si definiscono al massimo di 2-3 livelli di priorità.
-
-**Versione**: indica la versione del requisito. Ogni modifica del
-requisito avrà una versione aggiornata.
-
-Sulla documentazione apparirà solamente l’ultima versione, mentre le
-vecchie dovranno essere inserite nei diari.
-
-**Note**: eventuali osservazioni importanti o riferimenti ad altri
-requisiti.
-
-**Sotto requisiti**: elementi che compongono il requisito.
-
 
 ### Use case
 
@@ -153,7 +129,7 @@ del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettiv
 ![Gant preventivo 3](image/Gant_Preventivo_SnowFlake_3.JPG)
 ### Analisi dei mezzi
 
-Questo programma verrà creato con il linguaggio di programmazione java, la Versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
+Questo programma verrà creato con il linguaggio di programmazione java, la versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
 L'unico requisito è quello di installare la piattaforma java(JRE) per eseguire
 il .jar.
 
