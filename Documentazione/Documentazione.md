@@ -66,19 +66,17 @@
   Il documento seguente conterrà tutto ciò che riguarda il progetto fiocco di neve,
   dall'Analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
   Il progetto è stato creato a scopi didattici, è stato eseguito in java, e tratta
-  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, li potrà salvare e caricare, spostare e eliminare, una volta finito, tramite il bottone 'genera' si creerà un fiocco di neve, e infine con il bottone 'salva' si potrà scaricare il .jar dell'applicativo.
+  di fare un programma dove con un triangolo, l'utente inserisce dei punti nel frame che compare, si potranno salvare e caricare, spostare e eliminare, una volta finito, tramite il bottone 'genera' si creerà un fiocco di neve, e infine con il bottone 'salva' si potrà scaricare il .jar dell'applicativo.
 
 
 ### Scopo
 
   Lo scopo di questo progetto è completamente didattico, mi aiuterà a entrare nel
-  mondo dei progetti singoli, e mi metterà alla prova con il linguaggio di programmazione
-  java. <br>
+  mondo dei progetti singoli, e mi metterà alla prova con il linguaggio di programmazione java. <br>
   Il progetto consiste nel fare un'applicativo con java, che permette di creare
   un fiocco di neve. Partendo da un triangolo pieno e con dei punti taglio fatti
   col mouse, si tolgono alcune parti del triangolo e inseguito verrà generato
   il fiocco di neve.
-
 
 
 ## Analisi
@@ -109,12 +107,12 @@
   |Req-10|Si devono poter salvare i punti di taglio del fiocco per permettere modifiche o rigenerazioni future.|1|1.0|...|
   |Req-11|Il salvataggio del lavoro deve essere fatto in formato PNG o SVG.|1|1.0|...|
   |Req-12|Il salvataggio deve avere dimensioni definite dall'utente.|1|1.0|...|
-  |Req-11|Deve esserci un'interfaccia grafica.|1|1.0|...|
-  |Req-12|L'area di lavoro deve essere un triangolo.|1|1.0|...|
-  |Req-13|La finestra deve essere ridimensionabile e sarà di minio 1024x768.|1|1.0|...|
-  |Req-14|Nel sito ci deve essere la lista dei requisiti, JRE, guida con screenshots.|1|1.0|...|
-  |Req-15|Il salvataggio in vettoriale, dev'essere della dimensione corrente, di 500 o di 1000.|1|1.0|...|
-  |Req-16|Per il salvataggio l'utente deve vedere una schermata per scegliere il formato.|1|1.0|...|
+  |Req-13|Deve esserci un'interfaccia grafica.|1|1.0|...|
+  |Req-14|L'area di lavoro deve essere un triangolo.|1|1.0|...|
+  |Req-15|La finestra deve essere ridimensionabile e sarà di minio 1024x768.|1|1.0|...|
+  |Req-16|Nel sito ci deve essere la lista dei requisiti, JRE, guida con screenshots.|1|1.0|...|
+  |Req-17|Il salvataggio in vettoriale, dev'essere della dimensione corrente, di 500 o di 1000.|1|1.0|...|
+  |Req-18|Per il salvataggio l'utente deve vedere una schermata per scegliere il formato.|1|1.0|...|
 
 
 **Spiegazione elementi tabella dei requisiti:**
@@ -148,98 +146,145 @@ tranne se viene ottimizzato, potrebbe diventare un gioco dove, con la creazione
 del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettivi.
 
 ### Pianificazione
-![Gant preventivo](Gant_Consuntivo_SnowFlake.JPG)
+![Gant preventivo 1](image/Gant_Preventivo_SnowFlake.JPG)
 <br><br>
-![Gant preventivo](Gant_Consuntivo_SnowFlake_2.JPG)
+![Gant preventivo 2](image/Gant_Preventivo_SnowFlake_2.JPG)
 <br><br>
-![Gant preventivo](Gant_Consuntivo_SnowFlake_3.JPG)
+![Gant preventivo 3](image/Gant_Preventivo_SnowFlake_3.JPG)
 ### Analisi dei mezzi
 
 Questo programma verrà creato con il linguaggio di programmazione java, la Versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
-Non richiede nessun hardware particolare per eseguire/creare questo programma.
-
-
-SDK, librerie, tools utilizzati per la realizzazione del progetto e
-eventuali dipendenze.
+L'unico requisito è quello di installare la piattaforma java(JRE) per eseguire
+il .jar.
 
 
 ## Progettazione
 
 ### Design dell’architettura del sistema
 
-![Diagramma di flusso](../../../Diagramma_flusso.jpg)
+Questo è il diagramma delle classi(UML), ho deciso di farlo su 3 classi, la classe poligono che contiene una lista di punti e crea il poligono grazie ad i punti. <br>
+Una classe SnowFlake che contiene da 0 a infiti poligoni, da questa classe si possono salvare/caricare i punti, e salvare lo screen del panel in formato svg.<br>
+Infine c'è la classe SnowFrame, che contiene 3 pannelli con l'interfaccia grafica (bottoni, titolo e panel).
 
+![Uml delle classi](image/snowFlakeUML.svg)
 
 ### Design delle interfacce
+Ho scelta un'interfaccia molto colorata. Il colore azzurro di sfondo che va a
+richiamare il tema del fiocco di neve, e qualche colore con cui sta bene, tipo
+il giallo/arancio e il rosso.
 
-![Diagramma di flusso](../../../DesignTriangolo.png)
-<br><br><br>
-![Diagramma di flusso](../../../DesignFiocco.png)
+![Diagramma di flusso](image/screenSnowFlake.JPG)
 
 ### Design procedurale
+Ho fatto un diagramma di flusso per mostrare i vari passaggi dell'applicativo.
+Il diagramma rispecchia praticamente tutta la struttura che ho realmente, tranne
+per la generazione del fiocco di neve.
 
-Descrive i concetti dettagliati dell’architettura/sviluppo utilizzando
-ad esempio:
+![Diagramma di flusso](image/flowDiagram.svg)
 
--   Diagrammi di flusso e Nassi.
-
--   Tabelle.
-
--   Classi e metodi.
-
-Questi documenti permetteranno di rappresentare i dettagli procedurali
-per la realizzazione del prodotto.
 
 ## Implementazione
 
-In questo capitolo dovrà essere mostrato come è stato realizzato il
-lavoro. Questa parte può differenziarsi dalla progettazione in quanto il
-risultato ottenuto non per forza può essere come era stato progettato.
+In questo screen si può notare il metodo che uso per aggiungere i punti al frame, metodo che viene richiamato quando si clicca col mouse, si aggiungono dei punti alla lista di punti, finchè non si clicca ad una distanza di 8 pixel dal primo punto che si ha fatto, in modo che si chiude il poligono.
 
-Sulla base di queste informazioni il lavoro svolto dovrà essere
-riproducibile.
+![Metodo aggiunta punti](image/metodoAddPoint.jpg)
 
-In questa parte è richiesto l’inserimento di codice sorgente/print
-screen di maschere solamente per quei passaggi particolarmente
-significativi e/o critici.
+Questo metodo invece serve a salvare i punti che si sono fatti.
+praticamente si crea uno stringBuilder, in modo che si possono aggiungere elementi tranquillamente, senza sovrascriverli.
+Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(prese dal metodo printPoint, nella classe Poligono), e quando finisce un poligono, va a capo per far capire che il poligono è finito.
 
-Inoltre dovranno essere descritte eventuali varianti di soluzione o
-scelte di prodotti con motivazione delle scelte.
+![Metodo aggiunta punti](image/metodoSavePoint.jpg)
 
-Non deve apparire nessuna forma di guida d’uso di librerie o di
-componenti utilizzati. Eventualmente questa va allegata.
+![Metodo aggiunta punti](image/metodoPrintPoint.jpg)
 
-Per eventuali dettagli si possono inserire riferimenti ai diari.
+
 
 ## Test
 
 ### Protocollo di test
 
-Definire in modo accurato tutti i test che devono essere realizzati per
-garantire l’adempimento delle richieste formulate nei requisiti. I test
-fungono da garanzia di qualità del prodotto. Ogni test deve essere
-ripetibile alle stesse condizioni.
 
 
-|Test Case      | TC-001                               |
+|Test Case      | TC-01                               |
 |---------------|--------------------------------------|
-|**Nome**       |Import a card, but not shown with the GUI |
-|**Riferimento**|REQ-012                               |
-|**Descrizione**|Import a card with KIC, KID and KIK keys with no obfuscation, but not shown with the GUI |
-|**Prerequisiti**|Store on local PC: Profile\_1.2.001.xml (appendix n\_n) and Cards\_1.2.001.txt (appendix n\_n) |
-|**Procedura**     | - Go to “Cards manager” menu, in main page click “Import Profiles” link, Select the “1.2.001.xml” file, Import the Profile - Go to “Cards manager” menu, in main page click “Import Cards” link, Select the “1.2.001.txt” file, Delete the cards, Select the “1.2.001.txt” file, Import the cards |
-|**Risultati attesi** |Keys visible in the DB (OtaCardKey) but not visible in the GUI (Card details) |
+|**Nome**       |Aggiunta di punti nel frame |
+|**Riferimento**|REQ-04                               |
+|**Descrizione**|Provare ad aggiungere punti e controllare se si vedono e si creano i tagli.|
+|**Procedura**     |Clicco col mouse in vari punti del frame, faccio un punto all'esterno del triangolo e due all'interno.|
+|**Risultati attesi** |I punti sia all'esterno che all'interno del triangolo creano dei tagli. |
 
+|Test Case      | TC-02                               |
+|---------------|--------------------------------------|
+|**Nome**       |Resetto punti |
+|**Riferimento**|REQ-05                         |
+|**Descrizione**|Provare a resettare i punti e i poligoni, cliccando il bottone per il reset.|
+|**Procedura**     |Creo un paio di poligoni,alcuni con tanti punti e altri con pochi, infine fare altri punti senza chiudere il poligono, inseguito cliccare il bottone del reset e vedere se si eliminano tutti i punti.|
+|**Risultati attesi** |I punti e i poligoni si resettano correttamente. |
+
+|Test Case      | TC-03                               |
+|---------------|--------------------------------------|
+|**Nome**       |Spostare punti |
+|**Riferimento**|REQ-06                         |
+|**Descrizione**|Provare a spostare i punti trascinando un punto dal centro del triangolo all'esterno.|
+|**Procedura**     |Clicco col mouse nel mezzo del triangolo e provo subito dopo a trascinarlo fuori, e creo un poligono per vedere se si è veramente spostato.|
+|**Risultati attesi** |I punti si spostano correttamente e si crea il poligono con la nuova posizione del punto. |
+
+|Test Case      | TC-04                               |
+|---------------|--------------------------------------|
+|**Nome**       |Salvare punti |
+|**Riferimento**|REQ-10                         |
+|**Descrizione**|Provare a fare vari punti e poligoni e cliccare il bottone per salvare i punti.|
+|**Procedura**   |Clicco in varie parti del frame, sia dentro che fuori, e chiudo vari frame, inseguito clicco il bottone "save Point" e controllo il file per vedere se ci sono i giusti poligoni.|
+|**Risultati attesi** |Una volta salvati i punti, se si apre il file si noteranno i vari poligoni divisi da degli spazi. |
+
+|Test Case      | TC-05                               |
+|---------------|--------------------------------------|
+|**Nome**       |Sito web|
+|**Riferimento**|REQ-02/REQ-03                         |
+|**Descrizione**|Apro il sito web, controllo se ci sono tutte le descrizioni e controllo se c'è la possibilità di scaricare il software.|
+|**Procedura**   |Apro il sito, guardo tutte le parti del sito, provo a scaricare il software con l'apposito bottone e provo ad aprire il download.|
+|**Risultati attesi** |Il sito contiene tutto il necessario e il download funzionerà correttamente. |
+
+|Test Case      | TC-06                               |
+|---------------|--------------------------------------|
+|**Nome**       |Generazione fiocco di neve|
+|**Riferimento**|REQ-07/REQ-08                         |
+|**Descrizione**|Creo vari poligoni con un bel po' di punti, e controllo se c'è l'animazione in anteprima, e se si genera il fiocco di neve.|
+|**Procedura**   |Clicco in varie parti del frame, chiudo vari poligoni con diversi punti, guardo se c'è un'anteprima e inseguito clicco il tasto genera e aspetto che si crei un frame con il fiocco di neve.|
+|**Risultati attesi** |Non si genera il fiocco di neve, e non c'è l'anteprima. |
+
+|Test Case      | TC-07                               |
+|---------------|--------------------------------------|
+|**Nome**       |Salvataggio fiocco di neve|
+|**Riferimento**|REQ-09/REQ-11                         |
+|**Descrizione**|Clicco in varie parti del frame, creo vari poligoni, genero il fiocco di neve e lo salvo.|
+|**Procedura**   |Clicco col mouse in varie parti del triangolo, chiudo tutti i poligoni, clicco sul tasto genera, e infine clicco sul tasto salva.|
+|**Risultati attesi** |Visto che non si genera il fiocco di neve non si potrà salvare il fiocco di neve finale, però si può salvare in formato svg il triangolo con i poligoni tagliati. |
+
+|Test Case      | TC-08                                |
+|---------------|--------------------------------------|
+|**Nome**       |Ridimensionamento finestra, responsive|
+|**Riferimento**|REQ-15|
+|**Descrizione**|Ridimensionare la finestra e controllare se la dimensione minima è 1024x768 e se è responsive il triangolo ed i punti.|
+|**Procedura**   |Apro l'applicativo creo dei punti nel frame, e dei poligoni, inseguito provo a ridimensionare la finestra a meno di 1024x768 e controllo se sia tutto responsive.|
+|**Risultati attesi** |La dimensione minima è 1024x768, si può ridimensionare, ma solo il triangolo è responsive, i punti e i poligoni non lo sono. |
 
 ### Risultati test
+| Test Case |Esito test|
+|-------|--------|
+| TC-01 | Passato|
+| TC-02 | Passato|
+| TC-03 | Passato|
+| TC-04 | Passato|
+| TC-05 | Passato|
+| TC-06 | Bocciato|
+| TC-07 | Parzialmente passato|
+| TC-08 | Passato|
 
-Tabella riassuntiva in cui si inseriscono i test riusciti e non del
-prodotto finale. Se un test non riesce e viene corretto l’errore, questo
-dovrà risultare nel documento finale come riuscito (la procedura della
-correzione apparirà nel diario), altrimenti dovrà essere descritto
-l’errore con eventuali ipotesi di correzione.
 
 ### Mancanze/limitazioni conosciute
+
+Non sono riuscito a fare la generazione del fiocco di neve e perciò neanche l'animazione in tempo reale. Questo a causa di 
 
 Descrizione con motivazione di eventuali elementi mancanti o non
 completamente implementati, al di fuori dei test case. Non devono essere
@@ -264,37 +309,15 @@ facilmente generalizzabili o sono specifici di un caso particolare? ecc
   Migliorie o estensioni che possono essere sviluppate sul prodotto.
 
 ### Considerazioni personali
-  Cosa ho imparato in questo progetto? ecc
+  In questo progetto ho imparato nuovi approcci del linguaggio di programmazione java, nuovi metodi. Inoltre ho migliorato le mie competenze sia riguardo ai progetti, sia riguardo a java sia riguardo i progetti. Inizialmente pensavo di non poter riuscire a fare molto, ma col passare del tempo, suddividendo i problemi e pensadoci su, sono riuscito a fare più di quanto pensassi.
 
 ## Bibliografia
 
 ### Bibliografia per articoli di riviste
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
 
-2.  Titolo dell’articolo (tra virgolette),
-
-3.  Titolo della rivista (in italico),
-
-4.  Anno e numero
-
-5.  Pagina iniziale dell’articolo,
 
 ### Bibliografia per libri
 
-
-1.  Cognome e nome (o iniziali) dell’autore o degli autori, o nome
-    dell’organizzazione,
-
-2.  Titolo del libro (in italico),
-
-3.  ev. Numero di edizione,
-
-4.  Nome dell’editore,
-
-5.  Anno di pubblicazione,
-
-6.  ISBN.
 
 ### Sitografia
 
