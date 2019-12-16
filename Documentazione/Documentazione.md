@@ -51,8 +51,8 @@
 
 ### Informazioni sul progetto
 
-  - Questo progetto sarà realizzato dall'allievo: <br>
-        Marco Lorusso
+  - Questo progetto è stato realizzato dall'allievo: <br>
+        - Marco Lorusso
     <br>Mentre i docenti che avranno il ruolo di clienti/capo azienda sono: <br>
         Luca Muggiasca,
         Geo Petrini
@@ -284,7 +284,7 @@ Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(pre
 
 ### Mancanze/limitazioni conosciute
 
-Non sono riuscito a fare la generazione del fiocco di neve e perciò neanche l'animazione in tempo reale. Questo a causa di 
+Non sono riuscito a fare la generazione del fiocco di neve e perciò neanche l'animazione in tempo reale. Questo a causa di
 
 Descrizione con motivazione di eventuali elementi mancanti o non
 completamente implementati, al di fuori dei test case. Non devono essere
