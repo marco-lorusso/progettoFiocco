@@ -1,13 +1,12 @@
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
- *
- * @author maki4
+ * Frame che contiene lo snowflake con i poligoni, i bottoni e il titolo.
+ * @version 4.10.2019 
+ * @author Marco Lorusso
  */
 public class SnowFrame extends javax.swing.JFrame {
     
@@ -27,20 +26,52 @@ public class SnowFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        titlePanel = new javax.swing.JPanel();
+        title = new javax.swing.JLabel();
+        buttonPanel = new javax.swing.JPanel();
         ResetPoint = new javax.swing.JButton();
-        generateFlake = new javax.swing.JButton();
         SavePoint = new javax.swing.JButton();
-        DownloadPoint = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        UploadPoint = new javax.swing.JButton();
+        generateFlake = new javax.swing.JButton();
+        SaveSVG = new javax.swing.JButton();
+        framePanel = new javax.swing.JPanel();
         snowFlake = new SnowFlake();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1024, 768));
         setPreferredSize(new java.awt.Dimension(1024, 768));
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 255));
+        titlePanel.setBackground(new java.awt.Color(102, 204, 255));
 
+        title.setFont(new java.awt.Font("Wide Latin", 1, 48)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 51, 102));
+        title.setText("Snow flake");
+        title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        title.setPreferredSize(new java.awt.Dimension(358, 48));
+
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 758, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        getContentPane().add(titlePanel, java.awt.BorderLayout.PAGE_START);
+
+        buttonPanel.setBackground(new java.awt.Color(102, 204, 255));
+
+        ResetPoint.setBackground(java.awt.Color.orange);
+        ResetPoint.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         ResetPoint.setText("Reset");
         ResetPoint.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         ResetPoint.addActionListener(new java.awt.event.ActionListener() {
@@ -49,8 +80,8 @@ public class SnowFrame extends javax.swing.JFrame {
             }
         });
 
-        generateFlake.setText("Generate");
-
+        SavePoint.setBackground(java.awt.Color.orange);
+        SavePoint.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
         SavePoint.setText("Save Pont");
         SavePoint.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         SavePoint.addActionListener(new java.awt.event.ActionListener() {
@@ -59,57 +90,86 @@ public class SnowFrame extends javax.swing.JFrame {
             }
         });
 
-        DownloadPoint.setText("Download Point");
-        DownloadPoint.addActionListener(new java.awt.event.ActionListener() {
+        UploadPoint.setBackground(java.awt.Color.orange);
+        UploadPoint.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        UploadPoint.setText("Upload Point");
+        UploadPoint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DownloadPointActionPerformed(evt);
+                UploadPointActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(ResetPoint, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(generateFlake, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        generateFlake.setBackground(new java.awt.Color(255, 153, 51));
+        generateFlake.setFont(new java.awt.Font("MS PGothic", 1, 36)); // NOI18N
+        generateFlake.setText("Generate");
+        generateFlake.setMaximumSize(new java.awt.Dimension(100, 50));
+        generateFlake.setMinimumSize(new java.awt.Dimension(100, 50));
+        generateFlake.setPreferredSize(new java.awt.Dimension(100, 65));
+        generateFlake.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateFlakeActionPerformed(evt);
+            }
+        });
+
+        SaveSVG.setBackground(java.awt.Color.orange);
+        SaveSVG.setFont(new java.awt.Font("Tahoma", 1, 10)); // NOI18N
+        SaveSVG.setText("Save SVG");
+        SaveSVG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SaveSVGActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout buttonPanelLayout = new javax.swing.GroupLayout(buttonPanel);
+        buttonPanel.setLayout(buttonPanelLayout);
+        buttonPanelLayout.setHorizontalGroup(
+            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(buttonPanelLayout.createSequentialGroup()
+                .addGroup(buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(generateFlake, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(UploadPoint, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
                     .addComponent(SavePoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DownloadPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 67, Short.MAX_VALUE))
+                    .addComponent(ResetPoint, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(SaveSVG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 51, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(183, 183, 183)
-                .addComponent(DownloadPoint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(SavePoint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ResetPoint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(generateFlake)
-                .addContainerGap(371, Short.MAX_VALUE))
+        buttonPanelLayout.setVerticalGroup(
+            buttonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(buttonPanelLayout.createSequentialGroup()
+                .addGap(42, 42, 42)
+                .addComponent(UploadPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addComponent(SavePoint, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(ResetPoint, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(generateFlake, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addComponent(SaveSVG, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, java.awt.BorderLayout.LINE_END);
+        getContentPane().add(buttonPanel, java.awt.BorderLayout.LINE_END);
 
-        jPanel2.setLayout(new java.awt.BorderLayout());
+        framePanel.setBackground(new java.awt.Color(0, 153, 255));
+        framePanel.setLayout(new java.awt.BorderLayout());
+
+        snowFlake.setBackground(new java.awt.Color(102, 204, 255));
 
         javax.swing.GroupLayout snowFlakeLayout = new javax.swing.GroupLayout(snowFlake);
         snowFlake.setLayout(snowFlakeLayout);
         snowFlakeLayout.setHorizontalGroup(
             snowFlakeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 543, Short.MAX_VALUE)
+            .addGap(0, 7, Short.MAX_VALUE)
         );
         snowFlakeLayout.setVerticalGroup(
             snowFlakeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 668, Short.MAX_VALUE)
+            .addGap(0, 1493, Short.MAX_VALUE)
         );
 
-        jPanel2.add(snowFlake, java.awt.BorderLayout.CENTER);
+        framePanel.add(snowFlake, java.awt.BorderLayout.CENTER);
 
-        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
+        getContentPane().add(framePanel, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -117,7 +177,6 @@ public class SnowFrame extends javax.swing.JFrame {
     private void ResetPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetPointActionPerformed
         SnowFlake.pol.clear();
         SnowFlake.pol.add(new Poligono(snowFlake));
-        snowFlake.addMouseListener(snowFlake.pol.get(snowFlake.pol.size() - 1));
         snowFlake.repaint();
     }//GEN-LAST:event_ResetPointActionPerformed
 
@@ -125,9 +184,21 @@ public class SnowFrame extends javax.swing.JFrame {
         snowFlake.savePoint();
     }//GEN-LAST:event_SavePointActionPerformed
 
-    private void DownloadPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DownloadPointActionPerformed
-        snowFlake.downloadPoint();
-    }//GEN-LAST:event_DownloadPointActionPerformed
+    private void UploadPointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UploadPointActionPerformed
+        try {
+            snowFlake.uploadPoint();
+        } catch (IOException ex) {
+            Logger.getLogger(SnowFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_UploadPointActionPerformed
+
+    private void generateFlakeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateFlakeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generateFlakeActionPerformed
+
+    private void SaveSVGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SaveSVGActionPerformed
+        snowFlake.saveSvg();
+    }//GEN-LAST:event_SaveSVGActionPerformed
 
     /**
      * @param args the command line arguments
@@ -165,12 +236,15 @@ public class SnowFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton DownloadPoint;
     private javax.swing.JButton ResetPoint;
     private javax.swing.JButton SavePoint;
+    private javax.swing.JButton SaveSVG;
+    private javax.swing.JButton UploadPoint;
+    private javax.swing.JPanel buttonPanel;
+    private javax.swing.JPanel framePanel;
     private javax.swing.JButton generateFlake;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private SnowFlake snowFlake;
+    private javax.swing.JLabel title;
+    private javax.swing.JPanel titlePanel;
     // End of variables declaration//GEN-END:variables
 }
