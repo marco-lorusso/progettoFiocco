@@ -54,8 +54,8 @@
   - Questo progetto è stato realizzato dall'allievo: <br>
         - Marco Lorusso
     <br>Mentre i docenti che avranno il ruolo di clienti/capo azienda sono: <br>
-        Luca Muggiasca,
-        Geo Petrini
+        - Luca Muggiasca, <br>
+        - Geo Petrini
   - Scuola d'arti e mestieri Trevano, Informatica, modulo 306
 
   -   Il progetto è stato iniziato il  03.09.2019 e finirà il 20.12.2019
