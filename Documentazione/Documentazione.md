@@ -169,9 +169,9 @@ Questo metodo invece serve a salvare i punti che si sono fatti.
 praticamente si crea uno stringBuilder, in modo che si possono aggiungere elementi tranquillamente, senza sovrascriverli.
 Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(prese dal metodo printPoint, nella classe Poligono), e quando finisce un poligono, va a capo per far capire che il poligono è finito.
 
-![Metodo aggiunta punti](image/metodoSavePoint.jpg)
+![Metodo salva punti](image/metodoSavePoint.jpg)
 
-![Metodo aggiunta punti](image/metodoPrintPoint.jpg)
+![Metodo stampa punti](image/metodoPrintPoint.jpg)
 
 
 
@@ -282,18 +282,11 @@ stato una perdita di tempo? I risultati ottenuti sono generali,
 facilmente generalizzabili o sono specifici di un caso particolare? ecc
 
 ### Sviluppi futuri
-  Migliorie o estensioni che possono essere sviluppate sul prodotto.
+
+  Questo prodotto può essre migliorato molto, e può portare ad un prodotto finale molto carino. Si potrebbero implementare varie migliorie e creare nuovi frame con altre funzionalità.
 
 ### Considerazioni personali
   In questo progetto ho imparato nuovi approcci del linguaggio di programmazione java, nuovi metodi. Inoltre ho migliorato le mie competenze sia riguardo ai progetti, sia riguardo a java sia riguardo i progetti. Inizialmente pensavo di non poter riuscire a fare molto, ma col passare del tempo, suddividendo i problemi e pensadoci su, sono riuscito a fare più di quanto pensassi.
-
-## Bibliografia
-
-### Bibliografia per articoli di riviste
-
-
-### Bibliografia per libri
-
 
 ### Sitografia
 
