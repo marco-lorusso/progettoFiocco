@@ -197,11 +197,8 @@ public class SnowFlake extends JPanel implements MouseListener, MouseMotionListe
         SnowFrame sf = new SnowFrame();
         int returnVal = chooser.showOpenDialog(sf);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
-            System.out.println("You chose to open this file: "
-                    + chooser.getSelectedFile().getName());
             currentFile = chooser.getSelectedFile();
         } else {
-            System.out.println("Error to open file");
             currentFile = null;
             return;
         }
