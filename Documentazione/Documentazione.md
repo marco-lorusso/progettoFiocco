@@ -1,4 +1,4 @@
-1. [Introduzione](#introduzione)
+21. [Introduzione](#introduzione)
 
   - [Informazioni sul progetto](#informazioni-sul-progetto)
 
@@ -122,11 +122,9 @@ tranne se viene ottimizzato, potrebbe diventare un gioco dove, con la creazione
 del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettivi.
 
 ### Pianificazione
-![Gant preventivo 1](image/Gant_Preventivo_SnowFlake.JPG)
-<br><br>
-![Gant preventivo 2](image/Gant_Preventivo_SnowFlake_2.JPG)
-<br><br>
-![Gant preventivo 3](image/Gant_Preventivo_SnowFlake_3.JPG)
+Questo è il gant preventivo del progetto, l'ho diviso in varie parti, che sarebbero l'analisi, la progettazione, lo sviluppo, il collaudo e test e infine la documentazione.
+
+![Gant preventivo 1](attachments/Gant_Preventivo_SnowFlake.JPG)
 ### Analisi dei mezzi
 
 Questo programma verrà creato con il linguaggio di programmazione java, la versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
@@ -142,38 +140,47 @@ Questo è il diagramma delle classi(UML), ho deciso di farlo su 3 classi, la cla
 Una classe SnowFlake che contiene da 0 a infiti poligoni, da questa classe si possono salvare/caricare i punti, e salvare lo screen del panel in formato svg.<br>
 Infine c'è la classe SnowFrame, che contiene 3 pannelli con l'interfaccia grafica (bottoni, titolo e panel).
 
-![Uml delle classi](image/snowFlakeUML.svg)
+![Uml delle classi](attachments/snowFlakeUML.svg)
 
 ### Design delle interfacce
 Ho scelta un'interfaccia molto colorata. Il colore azzurro di sfondo che va a
 richiamare il tema del fiocco di neve, e qualche colore con cui sta bene, tipo
 il giallo/arancio e il rosso.
+È un'interfaccia molto attraente a primo sguardo, perciò ho scelto questi colori forti e questa disposizione degli elementi.
 
-![Diagramma di flusso](image/screenSnowFlake.JPG)
+![Diagramma di flusso](attachments/screenSnowFlake.JPG)
 
 ### Design procedurale
 Ho fatto un diagramma di flusso per mostrare i vari passaggi dell'applicativo.
 Il diagramma rispecchia praticamente tutta la struttura che ho realmente, tranne
-per la generazione del fiocco di neve.
+per la generazione del fiocco di neve. È molto facile e comprensibile come diagramma.
 
-![Diagramma di flusso](image/flowDiagram.svg)
+![Diagramma di flusso](attachments/flowDiagram.svg)
 
 
 ## Implementazione
 
-In questo screen si può notare il metodo che uso per aggiungere i punti al frame, metodo che viene richiamato quando si clicca col mouse, si aggiungono dei punti alla lista di punti, finchè non si clicca ad una distanza di 8 pixel dal primo punto che si ha fatto, in modo che si chiude il poligono.
+In questo screen si può notare il metodo che uso per aggiungere i punti al frame, metodo che viene richiamato quando si clicca col mouse, si aggiungono dei punti alla lista di punti, finchè non si clicca ad una distanza di 8 pixel dal primo punto che si ha fatto, in modo che si chiude il poligono, mettendo il booleano 'closed' a true.
 
-![Metodo aggiunta punti](image/metodoAddPoint.jpg)
+![Metodo aggiunta punti](attachments/metodoAddPoint.jpg)
 
 Questo metodo invece serve a salvare i punti che si sono fatti.
 praticamente si crea uno stringBuilder, in modo che si possono aggiungere elementi tranquillamente, senza sovrascriverli.
-Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(prese dal metodo printPoint, nella classe Poligono), e quando finisce un poligono, va a capo per far capire che il poligono è finito.
+Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(prese dal metodo printPoint, nella classe Poligono, vedi immagine sotto), e quando finisce un poligono, va a capo per far capire che il poligono è finito. Infine cronometro il tempo che ci mette a salvare i punti.
 
-![Metodo salva punti](image/metodoSavePoint.jpg)
+![Metodo salva punti](attachments/metodoSavePoint.jpg)
 
-![Metodo stampa punti](image/metodoPrintPoint.jpg)
+![Metodo stampa punti](attachments/metodoPrintPoint.jpg)
 
+Questo metodo invece serve a caricare i punti da un file esterno.
+Inizialmente apre una finestra per scegliere il file(JFileChooser), ed imposta la variabile currentFile con il file appena selezionato.
+inseguito controlla se il file scelto è stato selezionato, legge tutte le rige del file, crea un'array di stringhe di dimensione 2(x,y), in seguito legge punto per punto, se la riga non è vuota, divide la riga nell'array 'data' con la virgola come divisore e aggiunge all'ultimo poligono il punto, una volta che trova una riga vuota si crea un nuovo poligono.
 
+![Metodo carica punti](attachments/metodoUploadPoint.jpg)
+
+Questo metodo invece serve a salvare il frame in formato svg, è un metodo molto semplice, usando la Dom implementation, prende il paint che si ha fatto nel panel, li si passa l'elemento grafico, e lo si stremma, in fine viene salvato in formato svg.
+
+![Metodo salvataggio in svg](attachments/metodoSaveSvg.jpg)
 
 ## Test
 
@@ -245,6 +252,14 @@ Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(pre
 |**Procedura**   |Apro l'applicativo creo dei punti nel frame, e dei poligoni, inseguito provo a ridimensionare la finestra a meno di 1024x768 e controllo se sia tutto responsive.|
 |**Risultati attesi** |La dimensione minima è 1024x768, si può ridimensionare, ma solo il triangolo è responsive, i punti e i poligoni non lo sono. |
 
+|Test Case      | TC-09                                |
+|---------------|--------------------------------------|
+|**Nome**       |Salvataggio vettoriale|
+|**Riferimento**|REQ-17/REQ-18|
+|**Descrizione**|Salvare il fiocco di neve in formato vettoriale, con la dimensione corrente o di 500 o di 1000, l'utente può scegliere il formato con una schermata.|
+|**Procedura**   |Apro l'applicativo, faccio vari punti, chiudo vari poligoni e genero il fiocco di neve, infine clicco su un bottone per salvare nel formato che si vuole, tra cui il vettoriale.|
+|**Risultati attesi** |Non si può nè generare il fiocco di neve, ne salvare in vettoriale e non c'è nessuna schermata per scegliere il formato, visto che l'unico formato integrato è l'SVG. |
+
 ### Risultati test
 | Test Case |Esito test|
 |-------|--------|
@@ -256,30 +271,26 @@ Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(pre
 | TC-06 | Bocciato|
 | TC-07 | Parzialmente passato|
 | TC-08 | Passato|
+| TC-09 | Bocciato|
 
 
 ### Mancanze/limitazioni conosciute
 
-Non sono riuscito a fare la generazione del fiocco di neve e perciò neanche l'animazione in tempo reale. Questo a causa di
-
-Descrizione con motivazione di eventuali elementi mancanti o non
-completamente implementati, al di fuori dei test case. Non devono essere
-riportati gli errori e i problemi riscontrati e poi risolti durante il
-progetto.
+Non sono riuscito a fare la generazione del fiocco di neve e perciò neanche l'animazione in tempo reale. Questo a causa di una cattiva gestione del tempo, e di una mancata capacità di usare il linguaggio di programmazione java. Oltre quello non sono riuscito a fare il responsive dei punti, perciò al ridimensionamento della finestra si sfalsano tutti i punti.
+Anche per via del tempo non sono riuscito ad integrare il salvataggio in vettoriale, la schermata per le scelta del formato e l'animazione in tempo reale, sicuramente con un po' più di tempo, sarei riuscito ad integrare pure queste funzionalità.
 
 ## Consuntivo
 
-Consuntivo del tempo di lavoro effettivo e considerazioni riguardo le
-differenze rispetto alla pianificazione (cap 1.7) (ad esempio Gannt
-consuntivo).
+Questo è il gantt consuntivo, ho più o meno rispettato il gantt preventivo, tranne per la parte di sviluppo che è durata più di quanto avessi immaginato, pure la parte di documentazione è andata oltre quanto programmato. Questo perchè essendo il mio primo progetto, non sapevo per niente le tempistiche delle varie parti. Grazie a questo progetto appunto ho migliorato le mie esperienze su quest'aspetto, sperando che nei prossimi riuscirò a metterle in atto.
+
+![Gant consuntivo](attachments/Gant_Consuntivo.jpg)
 
 ## Conclusioni
 
-Quali sono le implicazioni della mia soluzione? Che impatto avrà?
-Cambierà il mondo? È un successo importante? È solo un’aggiunta
-marginale o è semplicemente servita per scoprire che questo percorso è
-stato una perdita di tempo? I risultati ottenuti sono generali,
-facilmente generalizzabili o sono specifici di un caso particolare? ecc
+Secondo me questo progetto nel mio piccolo è servito molto, anche se esternamente può sembrare inutile come progetto, secondo me non lo è affatto.
+L'applicativo in se non ha una grandissima utilità, però guardando il discorso della gestione del progetto, ha una grande utilità, secondo me mi aiuterà molto in futuro, anche se ho ancora molta strada da fare nell'argomento progetti.
+Mi aspettavo un po' di meno da me stesso sinceramente, pensavo che non sarei riuscito a fare quello che ho fatto, pensando alle mie competenze nella programmazione.
+
 
 ### Sviluppi futuri
 
