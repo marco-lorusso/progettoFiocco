@@ -63,10 +63,10 @@
 
 ### Abstract
 
-  Il documento seguente conterrà tutto ciò che riguarda il progetto "Snow flake",
-  dall'analisi, alla progettazione, all'implementazione, ai test e alle conclusioni.
-  Il progetto è stato creato completamente a scopi didattici, si poteva fare sia in java che in javascript, e consiste nel fare un programma dove con un triangolo di base, l'utente inserisce dei punti nel frame, si potranno salvare e caricare da un file, spostare e eliminare, una volta finito, tramite il bottone 'genera' si genererà un fiocco di neve. Infine con un bottone apposito si potrà scaricare il .jar dell'applicativo. Tutto questo deve essere documentato in questa documentazione e nel sito web, dove ci sarà il download dell'applicativo.
-
+  This documet will contain everything about the "Snow flake" project, from analysis, design, implementation, testing and conclusions. The project was created completly for education.
+  It consists of making making a program, where with a basic triangle, the user insert points in the frame, you can too save and upload points from a file, move and delete.
+  Once finished, using the button "generate" will generate a snowflake.
+  Finally, with a special button in the website you can download the .jar of the application.
 
 ### Scopo
 
@@ -301,35 +301,12 @@ Mi aspettavo un po' di meno da me stesso sinceramente, pensavo che non sarei riu
 
 ### Sitografia
 
-1.  URL del sito (se troppo lungo solo dominio, evt completo nel
-    diario),
 
-2.  Eventuale titolo della pagina (in italico),
 
-3.  Data di consultazione (GG-MM-AAAA).
-
-**Esempio:**
-
--   http://standards.ieee.org/guides/style/section7.html, *IEEE
-    Standards Style Manual*, 07-06-2008.
+-   https://xmlgraphics.apache.org/batik/using/svg-generator.html, *Save frame as svg*, 13-12-2019.
 
 ## Allegati
 
 Elenco degli allegati, esempio:
 
--   Diari di lavoro
-
--   Codici sorgente/documentazione macchine virtuali
-
--   Istruzioni di installazione del prodotto (con credenziali
-    di accesso) e/o di eventuali prodotti terzi
-
--   Documentazione di prodotti di terzi
-
--   Eventuali guide utente / Manuali di utilizzo
-
--   Mandato e/o Qdc
-
--   Prodotto
-
--   …
+-   Diari di lavoro dal 09-06-2019 al 20-12-2019

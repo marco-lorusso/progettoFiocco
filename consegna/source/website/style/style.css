@@ -1,0 +1,137 @@
+html
+{
+    height: 100%;
+}
+
+*
+{ 
+	  margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{ 
+	  font: normal .80em 'trebuchet ms', arial, sans-serif;
+    background: #F6F4F0 url(../image/pattern.jpg);
+    color: #47433F;
+    padding-bottom: 10px;
+}
+
+header
+{
+    background: #333;
+    height: 160px;
+    margin-bottom: 30px;
+}
+
+p
+{
+  	font-size: 15px;
+  	font-family: cursive;
+}
+
+
+#head h1
+{ 
+	  padding: 20px 0 0 20px;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+}
+
+#head h2
+{ 
+	  font-size: 15px;
+    padding: 4px 0 0 20px;
+    color: #05A4D1;
+}
+
+#menubar
+{
+    height: 60px;
+    padding: 0px 0 0 0px;
+    background: transparent;
+    margin-top: -77px;
+    margin-left:0;
+    display: block;
+} 
+
+ul#menu
+{
+	float: left;
+}
+
+ul#menu li
+{ 
+	float: right;
+    margin: 5px 0 0 0;
+    padding: 0 0 0 0px;
+    list-style: none;
+}
+
+ul#menu li a
+{
+	letter-spacing: 0.1em;
+	font: normal 100% serif;
+	display: block;
+	float: left; 
+	height: 39px;
+	padding: 11px 22px 11px 22px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+	background: #555;
+	text-decoration: none;
+    margin-right: 3px;
+} 
+
+ul#menu li a:hover
+{
+ 	color: #05A4D1;
+  	background: #444;
+  }
+
+ul#menu li.selected a
+{
+	color: #05A4D1;	
+  	background: #F6F4F0;
+}
+
+  ul#menu li.n_selected a:hover
+{ 
+	color: #05A4D1;
+}
+
+#container
+{
+	background: #FFFFFF;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 10px 20px 20px 20px;
+	height: 90%;
+}
+
+.images
+{
+  width: 50%;
+  height: 30%;
+  margin-left: 5px;
+  margin-right: 20px;
+  float: left;
+}
+
+.footer
+{ 
+  	background: #333;
+	font-family: sans-serif;
+	font-size: 90%;
+	height: 28px;
+	margin-bottom: : 5px;
+	padding: 10px 0 5px 0;
+	text-align: center; 
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}

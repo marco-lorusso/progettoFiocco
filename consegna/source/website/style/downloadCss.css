@@ -1,0 +1,190 @@
+html
+{
+    height: 100%;
+}
+
+*
+{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{ 
+    font: normal .80em 'trebuchet ms', arial, sans-serif;
+    background: #F6F4F0 url(../image/pattern.jpg);
+    color: #47433F;
+    padding-bottom: 10px;
+}
+
+header
+{
+    background: #333;
+    height: 160px;
+    margin-bottom: 30px;
+}
+
+p
+{
+    font-size: 15px;
+    font-family: cursive;
+}
+
+
+#head h1
+{ 
+    padding: 20px 0 0 20px;
+    color: #FFF;
+    letter-spacing: 0.1em;
+    font-size: 40px;
+}
+
+#head h2
+{ 
+    font-size: 15px;
+    padding: 4px 0 0 20px;
+    color: #05A4D1;
+}
+
+#menubar
+{
+    height: 60px;
+    padding: 0px 0 0 0px;
+    background: transparent;
+    margin-top: -77px;
+    margin-left:0;
+    display: block;
+} 
+
+ul#menu
+{
+    float: left;
+}
+
+ul#menu li
+{ 
+    float: right;
+    margin: 5px 0 0 0;
+    padding: 0 0 0 0px;
+    list-style: none;
+}
+
+ul#menu li a
+{
+    letter-spacing: 0.1em;
+    font: normal 100% serif;
+    display: block;
+    float: left; 
+    height: 39px;
+    padding: 11px 22px 11px 22px;
+    text-align: center;
+    color: #FFF;
+    text-transform: uppercase;
+    background: #555;
+    text-decoration: none;
+    margin-right: 3px;
+} 
+
+ul#menu li a:hover
+{
+    color: #05A4D1;
+    background: #444;
+  }
+
+ul#menu li.selected a
+{
+    color: #05A4D1; 
+    background: #F6F4F0;
+}
+
+  ul#menu li.n_selected a:hover
+{ 
+    color: #05A4D1;
+}
+
+#container
+{
+    background: #FFFFFF;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px 20px 20px;
+    height: 90%;
+}
+
+#btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0 150px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button {
+  display: inline-flex;
+  height: 100px;
+  width: 300px;
+  border: 2px solid #BFC0C0;
+  margin: 20px 20px 20px 20px;
+  color: #BFC0C0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+a {
+  color: #6397d0;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+#button-download {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-download a {
+  position: relative;
+  transition: all .45s ease-Out;
+}
+
+#translate {
+  transform: rotate(50deg);
+  width: 100%;
+  height: 250%;
+  left: -350px;
+  top: -60px;
+  background: #6397d0;
+  position: absolute;
+  transition: all .3s ease-Out;
+}
+
+#button-download:hover #translate {
+  left: 0;
+}
+
+#button-download:hover a {
+  color: #FFFFFF;
+}
+
+.footer
+{ 
+    background: #333;
+    font-family: sans-serif;
+    font-size: 90%;
+    height: 28px;
+    margin-bottom: : 5px;
+    padding: 10px 0 5px 0;
+    text-align: center; 
+    color: #FFFFFF;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
