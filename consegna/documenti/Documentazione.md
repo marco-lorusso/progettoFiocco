@@ -124,7 +124,7 @@ del fiocco di neve si procede per un perscorso, dove bisogna fare vari obbiettiv
 ### Pianificazione
 Questo è il gant preventivo del progetto, l'ho diviso in varie parti, che sarebbero l'analisi, la progettazione, lo sviluppo, il collaudo e test e infine la documentazione.
 
-[Gant preventivo 1](attachments/Gant_Preventivo_SnowFlake.JPG)
+![Gant preventivo 1](attachments/Gant_Preventivo_SnowFlake.JPG)
 ### Analisi dei mezzi
 
 Questo programma verrà creato con il linguaggio di programmazione java, la versione che uso è la 12.0.2, mentre come compilatore/editore, uso netBeans versione 11.1.
@@ -140,7 +140,7 @@ Questo è il diagramma delle classi(UML), ho deciso di farlo su 3 classi, la cla
 Una classe SnowFlake che contiene da 0 a infiti poligoni, da questa classe si possono salvare/caricare i punti, e salvare lo screen del panel in formato svg.<br>
 Infine c'è la classe SnowFrame, che contiene 3 pannelli con l'interfaccia grafica (bottoni, titolo e panel).
 
-[Uml delle classi](attachments/snowFlakeUML.svg)
+![Uml delle classi](attachments/snowFlakeUML.svg)
 
 ### Design delle interfacce
 Ho scelta un'interfaccia molto colorata. Il colore azzurro di sfondo che va a
@@ -148,39 +148,39 @@ richiamare il tema del fiocco di neve, e qualche colore con cui sta bene, tipo
 il giallo/arancio e il rosso.
 È un'interfaccia molto attraente a primo sguardo, perciò ho scelto questi colori forti e questa disposizione degli elementi.
 
-[Diagramma di flusso](attachments/screenSnowFlake.JPG)
+![Diagramma di flusso](attachments/screenSnowFlake.JPG)
 
 ### Design procedurale
 Ho fatto un diagramma di flusso per mostrare i vari passaggi dell'applicativo.
 Il diagramma rispecchia praticamente tutta la struttura che ho realmente, tranne
 per la generazione del fiocco di neve. È molto facile e comprensibile come diagramma.
 
-[Diagramma di flusso](attachments/flowDiagram.svg)
+![Diagramma di flusso](attachments/flowDiagram.svg)
 
 
 ## Implementazione
 
 In questo screen si può notare il metodo che uso per aggiungere i punti al frame, metodo che viene richiamato quando si clicca col mouse, si aggiungono dei punti alla lista di punti, finchè non si clicca ad una distanza di 8 pixel dal primo punto che si ha fatto, in modo che si chiude il poligono, mettendo il booleano 'closed' a true.
 
-[Metodo aggiunta punti](attachments/metodoAddPoint.jpg)
+![Metodo aggiunta punti](attachments/metodoAddPoint.jpg)
 
 Questo metodo invece serve a salvare i punti che si sono fatti.
 praticamente si crea uno stringBuilder, in modo che si possono aggiungere elementi tranquillamente, senza sovrascriverli.
 Per ogni poligono, viene salvato dentro lo stringBuilder le coordinate x e y(prese dal metodo printPoint, nella classe Poligono, vedi immagine sotto), e quando finisce un poligono, va a capo per far capire che il poligono è finito. Infine cronometro il tempo che ci mette a salvare i punti.
 
-[Metodo salva punti](attachments/metodoSavePoint.jpg)
+![Metodo salva punti](attachments/metodoSavePoint.jpg)
 
-[Metodo stampa punti](attachments/metodoPrintPoint.jpg)
+![Metodo stampa punti](attachments/metodoPrintPoint.jpg)
 
 Questo metodo invece serve a caricare i punti da un file esterno.
 Inizialmente apre una finestra per scegliere il file(JFileChooser), ed imposta la variabile currentFile con il file appena selezionato.
 inseguito controlla se il file scelto è stato selezionato, legge tutte le rige del file, crea un'array di stringhe di dimensione 2(x,y), in seguito legge punto per punto, se la riga non è vuota, divide la riga nell'array 'data' con la virgola come divisore e aggiunge all'ultimo poligono il punto, una volta che trova una riga vuota si crea un nuovo poligono.
 
-[Metodo carica punti](attachments/metodoUploadPoint.jpg)
+![Metodo carica punti](attachments/metodoUploadPoint.jpg)
 
 Questo metodo invece serve a salvare il frame in formato svg, è un metodo molto semplice, usando la Dom implementation, prende il paint che si ha fatto nel panel, li si passa l'elemento grafico, e lo si stremma, in fine viene salvato in formato svg.
 
-[Metodo salvataggio in svg](attachments/metodoSaveSvg.jpg)
+![Metodo salvataggio in svg](attachments/metodoSaveSvg.jpg)
 
 ## Test
 
@@ -283,7 +283,7 @@ Anche per via del tempo non sono riuscito ad integrare il salvataggio in vettori
 
 Questo è il gantt consuntivo, ho più o meno rispettato il gantt preventivo, tranne per la parte di sviluppo che è durata più di quanto avessi immaginato, pure la parte di documentazione è andata oltre quanto programmato. Questo perchè essendo il mio primo progetto, non sapevo per niente le tempistiche delle varie parti. Grazie a questo progetto appunto ho migliorato le mie esperienze su quest'aspetto, sperando che nei prossimi riuscirò a metterle in atto.
 
-[Gant consuntivo](attachments/Gant_Consuntivo.jpg)
+![Gant consuntivo](attachments/Gant_Consuntivo.jpg)
 
 ## Conclusioni
 
