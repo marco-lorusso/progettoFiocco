@@ -283,7 +283,7 @@ Anche per via del tempo non sono riuscito ad integrare il salvataggio in vettori
 
 Questo è il gantt consuntivo, ho più o meno rispettato il gantt preventivo, tranne per la parte di sviluppo che è durata più di quanto avessi immaginato, pure la parte di documentazione è andata oltre quanto programmato. Questo perchè essendo il mio primo progetto, non sapevo per niente le tempistiche delle varie parti. Grazie a questo progetto appunto ho migliorato le mie esperienze su quest'aspetto, sperando che nei prossimi riuscirò a metterle in atto.
 
-![Gant consuntivo](attachments/Gant_Consuntivo.jpg)
+![Gant consuntivo](attachments/Gant_Consuntivo.JPG)
 
 ## Conclusioni
 
